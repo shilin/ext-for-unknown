@@ -1,5 +1,5 @@
 class Product < ApplicationRecord
-  belongs_to :category
+  belongs_to :category, counter_cache: true
 
   validates :name, :price, presence: true
   validates :name, uniqueness: true
